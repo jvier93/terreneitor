@@ -236,6 +236,20 @@ for comb in combinaciones:
     ultima_columna_resuelta.append(resultado_expresion)
     resultado.append(lista_final) 
 
+
+resultado_transformado = []
+
+for fila in resultado:
+    fila_transformada = []
+    for valor in fila:
+        if valor is True:
+            fila_transformada.append("V")
+        elif valor is False:
+            fila_transformada.append("F")
+        else:
+            fila_transformada.append(valor)
+    resultado_transformado.append(fila_transformada)
+    
 clasificacion = clasificar_expresion(ultima_columna_resuelta)
-print(tabulate(resultado, headers=expresionTokenizada, tablefmt="grid"))
+print(tabulate(resultado_transformado, headers=expresionTokenizada, tablefmt="grid"))
 print(f"La expresión es: {clasificacion}")
