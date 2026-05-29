@@ -113,7 +113,7 @@ def resolver_combinacion(expresion, contexto):
             avanzar()                        
             
             operando_derecho = parse_or()  
-            operando_izquierdo = not operando_izquierdo or operando_derecho                # ¡Hace la matemática!
+            operando_izquierdo = not operando_izquierdo or operando_derecho                
             expresion_a_resolver[indice_operador] = operando_izquierdo  
           
 
@@ -148,7 +148,7 @@ def resolver_combinacion(expresion, contexto):
             avanzar()                        
             
             operando_derecho = parse_not()               
-            operando_izquierdo = operando_izquierdo and operando_derecho                # ¡Hace la matemática!
+            operando_izquierdo = operando_izquierdo and operando_derecho                
             
             expresion_a_resolver[indice_operador] = operando_izquierdo  
           
@@ -164,7 +164,7 @@ def resolver_combinacion(expresion, contexto):
             avanzar()                        
             
             operando_derecho = parse_and()               
-            operando_izquierdo = (operando_izquierdo and not operando_derecho) or (not operando_izquierdo and operando_derecho)  # XOR
+            operando_izquierdo = (operando_izquierdo and not operando_derecho) or (not operando_izquierdo and operando_derecho)  
             
             expresion_a_resolver[indice_operador] = operando_izquierdo  
            
@@ -178,7 +178,7 @@ def resolver_combinacion(expresion, contexto):
             avanzar()                        
             
             operando_derecho = parse_and()               
-            operando_izquierdo = operando_izquierdo or operando_derecho                 # ¡Hace la matemática!
+            operando_izquierdo = operando_izquierdo or operando_derecho                 
             
             expresion_a_resolver[indice_operador] = operando_izquierdo     
            
